@@ -13,5 +13,9 @@ steps:
       echo $(CANDIDATED_TAG)
     displayName: Echo Group Variables
 
-  - bash: |
-      "##vso[task.setvariable variable=CANDIDATED_TAG;isOutput=true]secondValue"
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: 'Pay-As-You-Go(1)(794dfaef-8b32-413e-aaca-33f621657397)'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'az pipelines variable-group variable update --group-id FOO --name CANDIDATED_TAG --value two'
