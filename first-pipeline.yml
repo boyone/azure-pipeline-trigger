@@ -4,4 +4,8 @@ trigger:
 steps:
   - script: |
       echo 'first pipeline'
-    displayName: Docker restore
+    displayName: First
+  
+  - script: |
+      echo $(FOO.CANDIDATED_TAG)
+    displayName: Echo Group Variables
