@@ -1,7 +1,14 @@
 trigger:
   - main
 
+variables:
+- group: FOO
+
 steps:
   - script: |
       echo 'second pipeline'
     displayName: Docker restore
+
+  - script: |
+      echo $(CANDIDATED_TAG)
+    displayName: Echo Group Variables
