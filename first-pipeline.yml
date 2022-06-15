@@ -1,11 +1,14 @@
 trigger:
   - main
 
+variables:
+- group: FOO
+
 steps:
   - script: |
       echo 'first pipeline'
     displayName: First
   
   - script: |
-      echo $(FOO.CANDIDATED_TAG)
+      echo $(CANDIDATED_TAG)
     displayName: Echo Group Variables
