@@ -1,0 +1,7 @@
+trigger:
+  - main
+
+steps:
+  - script: |
+      echo 'second pipeline'
+    displayName: Docker restore
