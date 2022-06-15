@@ -14,4 +14,4 @@ steps:
     displayName: Echo Group Variables
 
   - script: |
-      "##vso[task.setvariable variable=CANDIDATED_TAG]secondValue"
+      "##vso[task.setvariable variable=CANDIDATED_TAG;]secondValue"
