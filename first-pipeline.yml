@@ -10,5 +10,11 @@ steps:
     displayName: First
   
   - script: |
-      echo $(CANDIDATED_TAG)
+      echo 'Candidate tag: $(CANDIDATED_TAG)'
+      echo 'Build Number: $(Build.BuildNumber)'
+      echo '$(Build.BuildNumber)' > buildVersion
     displayName: Echo Group Variables
+
+
+  - publish: $(System.DefaultWorkingDirectory)/buildVersion
+    artifact: build

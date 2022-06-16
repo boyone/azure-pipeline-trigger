@@ -14,5 +14,13 @@ steps:
     displayName: Docker restore
 
   - script: |
-      echo $(CANDIDATED_TAG)
+      echo 'Build Number: $(Build.BuildNumber)'
     displayName: Echo Group Variables
+
+  - download: current
+    artifact: build
+    displayName: Download artifacts
+
+  - script: |
+      echo build
+    displayName: Echo Build Version
