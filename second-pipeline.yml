@@ -16,11 +16,15 @@ steps:
       echo 'Build Number: $(Build.BuildNumber)'
     displayName: Echo Group Variables
 
-  - task: DownloadPipelineArtifact@2
+  - task: DownloadBuildArtifacts@1
     inputs:
-      artifact: build
-      path: $(System.DefaultWorkingDirectory)/buildVersion
-      displayName: Download artifacts
+      buildType: 'specific'
+      project: '673d6d0d-f908-4430-bf35-c2a89780097d'
+      pipeline: '6'
+      buildVersionToDownload: 'latest'
+      downloadType: 'specific'
+      itemPattern: 'buildVersion'
+      downloadPath: '$(System.ArtifactsDirectory)'
 
   - script: |
       echo buildVersion
