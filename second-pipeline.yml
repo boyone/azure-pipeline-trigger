@@ -27,6 +27,6 @@ steps:
       downloadPath: '$(System.ArtifactsDirectory)'
 
   - script: |
-      echo buildVersion
+      cat buildVersion
     displayName: Echo Build Version
 
