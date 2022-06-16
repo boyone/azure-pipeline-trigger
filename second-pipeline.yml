@@ -23,8 +23,8 @@ steps:
       pipeline: '6'
       buildVersionToDownload: 'latest'
       downloadType: 'specific'
-      itemPattern: 'buildVersion'
-      downloadPath: '$(System.ArtifactsDirectory)'
+      itemPattern: '**/buildVersion'
+      downloadPath: '$(System.DefaultWorkingDirectory)'
 
   - script: |
       cat buildVersion
