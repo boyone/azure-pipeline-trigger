@@ -19,7 +19,7 @@ steps:
 
   - download: current
     artifact: build
-    patterns: 'buildVersion'
+    patterns: '**/buildVersion'
     displayName: Download artifacts
 
   - script: |
