@@ -1,7 +1,7 @@
 resources:
   pipelines:
     - pipeline: trigger-pipeline # Name of the pipeline resource.
-      source: first-pipeline # The name of the pipeline referenced by this pipeline resource.
+      source: boyone.first-pipeline-trigger # The name of the pipeline referenced by this pipeline resource.
       trigger: true
 
 variables:
