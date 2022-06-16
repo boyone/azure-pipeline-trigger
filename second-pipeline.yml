@@ -19,8 +19,7 @@ steps:
   - task: DownloadPipelineArtifact@2
     inputs:
       artifact: build
-      patterns: 'buildVersion'
-      path: $(System.DefaultWorkingDirectory)
+      path: $(System.DefaultWorkingDirectory)/buildVersion
       displayName: Download artifacts
 
   - script: |
