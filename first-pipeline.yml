@@ -17,9 +17,9 @@ steps:
     
   - task: PublishBuildArtifacts@1
     inputs:
-      PathtoPublish: '$(Build.ArtifactStagingDirectory)/buildVersion'
+      PathtoPublish: '$(System.DefaultWorkingDirectory)/buildVersion'
       ArtifactName: 'build'
-      publishLocation: 'Container'
+      # publishLocation: 'Container'
 
   # - publish: $(System.DefaultWorkingDirectory)/buildVersion
   #   artifact: build
