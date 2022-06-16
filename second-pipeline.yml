@@ -4,6 +4,10 @@ resources:
       source: boyone.first-pipeline-trigger # The name of the pipeline referenced by this pipeline resource.
       trigger: true
         
+trigger:
+  branches:
+    exclude:
+      - main
 
 variables:
   - group: FOO
