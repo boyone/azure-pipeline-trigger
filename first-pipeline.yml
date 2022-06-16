@@ -15,11 +15,11 @@ steps:
       echo '$(Build.BuildNumber)' > buildVersion
     displayName: Echo Group Variables
     
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: '$(System.DefaultWorkingDirectory)/buildVersion'
-      ArtifactName: 'build'
+  # - task: PublishBuildArtifacts@1
+  #   inputs:
+  #     PathtoPublish: '$(System.DefaultWorkingDirectory)/buildVersion'
+  #     ArtifactName: 'build'
       # publishLocation: 'Container'
 
-  # - publish: $(System.DefaultWorkingDirectory)/buildVersion
-  #   artifact: build
+  - publish: $(System.DefaultWorkingDirectory)/buildVersion
+    artifact: build
