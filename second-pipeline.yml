@@ -27,6 +27,6 @@ steps:
       downloadPath: '$(System.DefaultWorkingDirectory)'
 
   - script: |
-      cat buildVersion
+      cat build/buildVersion
     displayName: Echo Build Version
 
