@@ -3,7 +3,6 @@ resources:
     - pipeline: trigger-pipeline # Name of the pipeline resource.
       source: boyone.first-pipeline-trigger # The name of the pipeline referenced by this pipeline resource.
       trigger: true
-      branch: main
 
 variables:
   - group: FOO
@@ -19,9 +18,11 @@ steps:
 
   - download: current
     artifact: build
-    patterns: '**/buildVersion'
+    patterns: 'buildVersion'
+    path: $(System.DefaultWorkingDirectory)
     displayName: Download artifacts
 
   - script: |
-      echo build
+      echo buildVersion
     displayName: Echo Build Version
+
