@@ -12,7 +12,8 @@ steps:
   - script: |
       echo 'Candidate tag: $(CANDIDATED_TAG)'
       echo 'Build Number: $(Build.BuildNumber)'
-      echo '$(Build.BuildNumber)' > buildVersion
+      echo '$(Build.BuildNumber)' > builder/buildVersion1
+      echo '$(Build.BuildNumber)' > builder/buildVersion2
     displayName: Echo Group Variables
     
   # - task: PublishBuildArtifacts@1
@@ -21,5 +22,5 @@ steps:
   #     ArtifactName: 'build'
   #     publishLocation: 'Container'
 
-  - publish: $(System.DefaultWorkingDirectory)/buildVersion
+  - publish: $(System.DefaultWorkingDirectory)/builder
     artifact: build

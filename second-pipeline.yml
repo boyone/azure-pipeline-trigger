@@ -28,7 +28,7 @@ steps:
       pipeline: '6'
       buildVersionToDownload: 'latest'
       downloadType: 'specific'
-      itemPattern: '**/buildVersion'
+      itemPattern: 'build/**'
       downloadPath: '$(System.DefaultWorkingDirectory)'
 
   # - task: DownloadBuildArtifacts@1
@@ -39,6 +39,6 @@ steps:
   #     downloadPath: '$(System.DefaultWorkingDirectory)'
 
   - script: |
-      cat build/buildVersion
+      cat build/buildVersion1
     displayName: Echo Build Version
 
