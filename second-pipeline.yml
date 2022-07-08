@@ -15,6 +15,7 @@ variables:
 steps:
   - script: |
       echo 'second pipeline'
+      echo '$(Build.Repository.ID)'
     displayName: Docker restore
 
   - script: |

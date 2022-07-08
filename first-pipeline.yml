@@ -7,6 +7,7 @@ variables:
 steps:
   - script: |
       echo 'first pipeline'
+      echo '$(Build.Repository.ID)'
     displayName: First
   
   - script: |
