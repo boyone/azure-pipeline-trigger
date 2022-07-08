@@ -3,7 +3,7 @@ resources:
     - pipeline: trigger-pipeline # Name of the pipeline resource.
       source: boyone.first-pipeline-trigger # The name of the pipeline referenced by this pipeline resource.
       trigger: true
-        
+
 trigger:
   branches:
     exclude:
@@ -34,6 +34,13 @@ steps:
       itemPattern: 'build/**'
       downloadPath: '$(System.DefaultWorkingDirectory)'
 
+  - script: |
+      if [[ -f "$(System.DefaultWorkingDirectory)/build/buildVersion1" ]
+      then
+          echo "got buildVersion1"
+      fi
+    displayName: Check existed file1
+
   - task: DownloadBuildArtifacts@1
     inputs:
       buildType: 'specific'
@@ -43,6 +50,13 @@ steps:
       downloadType: 'specific'
       itemPattern: 'buildxxx/**'
       downloadPath: '$(System.DefaultWorkingDirectory)'
+
+  - script: |
+      if [[ -f "$(System.DefaultWorkingDirectory)/buildxxx/buildVersion1" ]
+      then
+          echo "got buildVersion1"
+      fi
+    displayName: Check existed file2
 
   # - task: DownloadBuildArtifacts@1
   #   inputs:
@@ -56,4 +70,3 @@ steps:
       cat build/buildVersion1
       cat build/buildVersion2
     displayName: Echo Build Version
-
