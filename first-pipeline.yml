@@ -10,6 +10,7 @@ steps:
     displayName: First
   
   - script: |
+      mkdir builder
       echo 'Candidate tag: $(CANDIDATED_TAG)'
       echo 'Build Number: $(Build.BuildNumber)'
       echo '$(Build.BuildNumber)' > builder/buildVersion1
