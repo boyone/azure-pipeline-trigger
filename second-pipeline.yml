@@ -34,6 +34,16 @@ steps:
       itemPattern: 'build/**'
       downloadPath: '$(System.DefaultWorkingDirectory)'
 
+  - task: DownloadBuildArtifacts@1
+    inputs:
+      buildType: 'specific'
+      project: '673d6d0d-f908-4430-bf35-c2a89780097d'
+      pipeline: '6'
+      buildVersionToDownload: 'latest'
+      downloadType: 'specific'
+      itemPattern: 'buildx/**'
+      downloadPath: '$(System.DefaultWorkingDirectory)'
+
   # - task: DownloadBuildArtifacts@1
   #   inputs:
   #     buildType: 'current'
