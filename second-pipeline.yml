@@ -16,6 +16,8 @@ steps:
   - script: |
       echo 'second pipeline'
       echo '$(Build.Repository.ID)'
+      commitID=$(git rev-parse --short HEAD)
+      echo $commitID
     displayName: Docker restore
 
   - script: |

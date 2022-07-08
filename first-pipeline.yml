@@ -8,6 +8,8 @@ steps:
   - script: |
       echo 'first pipeline'
       echo '$(Build.Repository.ID)'
+      commitID=$(git rev-parse --short HEAD)
+      echo $commitID 
     displayName: First
   
   - script: |
