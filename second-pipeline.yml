@@ -39,6 +39,8 @@ steps:
   #     downloadPath: '$(System.DefaultWorkingDirectory)'
 
   - script: |
+      ls -al build/
       cat build/buildVersion1
+      cat build/buildVersion2
     displayName: Echo Build Version
 

@@ -13,8 +13,8 @@ steps:
       mkdir builder
       echo 'Candidate tag: $(CANDIDATED_TAG)'
       echo 'Build Number: $(Build.BuildNumber)'
-      echo '$(Build.BuildNumber)' > builder/buildVersion1
-      echo '$(Build.BuildNumber)' > builder/buildVersion2
+      echo 'artifact-$(Build.BuildNumber)' > builder/buildVersion1
+      echo 'tag-$(Build.BuildNumber)' > builder/buildVersion2
     displayName: Echo Group Variables
     
   # - task: PublishBuildArtifacts@1
