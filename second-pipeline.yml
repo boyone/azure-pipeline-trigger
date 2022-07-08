@@ -41,7 +41,7 @@ steps:
       pipeline: '6'
       buildVersionToDownload: 'latest'
       downloadType: 'specific'
-      itemPattern: 'buildx/**'
+      itemPattern: 'buildxxx/**'
       downloadPath: '$(System.DefaultWorkingDirectory)'
 
   # - task: DownloadBuildArtifacts@1
