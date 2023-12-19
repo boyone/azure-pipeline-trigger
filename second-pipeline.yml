@@ -9,8 +9,8 @@ trigger:
     exclude:
       - main
 
-variables:
-  - group: FOO
+# variables:
+#   - group: FOO
 
 steps:
   - script: |
