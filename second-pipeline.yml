@@ -44,8 +44,8 @@ steps:
   - task: DownloadBuildArtifacts@1
     inputs:
       buildType: 'specific'
-      project: '673d6d0d-f908-4430-bf35-c2a89780097d'
-      pipeline: '6'
+      project: '74f110a3-9b27-4dfa-9c9e-1d2346806619'
+      pipeline: '1'
       buildVersionToDownload: 'latest'
       downloadType: 'specific'
       itemPattern: 'buildxxx/**'
