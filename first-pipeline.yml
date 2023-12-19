@@ -14,7 +14,7 @@ steps:
   
   - script: |
       mkdir builder
-      echo 'Candidate tag: $(CANDIDATED_TAG)'
+      # echo 'Candidate tag: $(CANDIDATED_TAG)'
       echo 'Build Number: $(Build.BuildNumber)'
       echo 'artifact-$(Build.BuildNumber)' > builder/buildVersion1
       echo 'tag-$(Build.BuildNumber)' > builder/buildVersion2
